@@ -1,0 +1,57 @@
+	
+	
+	
+load_byte:
+   lda #"O"
+   jsr write
+   lda #CS2
+	sta PORTB
+	lda #DATA_READ
+	jsr spi_transceive
+	lda ADHI
+   jsr spi_transceive ;adress 2
+   lda ADLO
+	jsr spi_transceive ;adress 1     
+   lda #00
+   jsr spi_transceive ;bytes     
+   inc ADLO
+   bne end_load
+   inc ADHI
+end_load:
+   pha 
+   lda #CSH
+	sta PORTB
+	pla
+   beq stop	
+   SEC
+   RTS
+
+stop: 
+   lda #00
+   sta SFLAG
+   CLC  
+   RTS
+	
+
+save_to_eeprom:
+   pha 
+   jsr writeenable
+   lda #CS2
+	sta PORTB
+	lda #DATA_WRITE
+	jsr spi_transceive
+   lda ADHI
+   jsr spi_transceive ;adress 2
+   lda ADLO
+	jsr spi_transceive ;adress 1     
+   pla
+   jsr spi_transceive ;byte
+   inc ADLO
+   bne end_save
+   inc ADHI
+end_save:
+   pha
+   lda #CSH
+	sta PORTB
+	pla
+   rts

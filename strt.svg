@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f0e8d0" />
+
+  <!-- Mountains -->
+  <polygon points="0,400 200,200 400,400" fill="#c0c0c0" />
+  <polygon points="200,400 400,200 600,400" fill="#b0b0b0" />
+  <polygon points="400,400 600,200 800,400" fill="#a0a0a0" />
+
+  <!-- Sun -->
+  <circle cx="700" cy="100" r="50" fill="#ffd700" />
+
+  <!-- Clouds -->
+  <circle cx="100" cy="100" r="30" fill="#ffffff" />
+  <circle cx="150" cy="120" r="40" fill="#ffffff" />
+  <circle cx="200" cy="100" r="35" fill="#ffffff" />
+
+  <!-- Oak Trees -->
+  <rect x="50" y="350" width="20" height="100" fill="#8b4513" />
+  <rect x="100" y="320" width="20" height="130" fill="#8b4513" />
+  <rect x="150" y="340" width="20" height="110" fill="#8b4513" />
+  <rect x="650" y="350" width="20" height="100" fill="#8b4513" />
+  <rect x="700" y="320" width="20" height="130" fill="#8b4513" />
+  <rect x="750" y="340" width="20" height="110" fill="#8b4513" />
+
+  <!-- Windmill Base -->
+  <rect x="350" y="400" width="100" height="200" fill="#8b0000" />
+
+  <!-- Windmill Blades -->
+  <line x1="400" y1="200" x2="350" y2="400" stroke="#000000" stroke-width="3" />
+  <line x1="400" y1="200" x2="450" y2="400" stroke="#000000" stroke-width="3" />
+  <line x1="400" y1="200" x2="400" y2="400" stroke="#000000" stroke-width="3" />
+
+  <!-- Windmill Roof -->
+  <polygon points="350,400 450,400 400,300" fill="#8b0000" />
+</svg>

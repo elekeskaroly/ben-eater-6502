@@ -1,0 +1,5 @@
+12.24.2023
+SPI EEPROM working
+Print bug fixed
+Timer 1 working
+IRQ on timer 1 and keyboard
